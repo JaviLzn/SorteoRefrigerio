@@ -1,0 +1,18 @@
+<div class="container-fluid col-md-4">
+    <h1 class=" text-center">Sorteo del refri</h1>
+    <form>
+        <div class="form-group">
+            <label for="formGroupExampleInput">Digite el número de Participantes:</label>
+            <input type="text" class="form-control" placeholder="# Participantes" #numeroparticipantes>
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput2">Digite el numero de ganadores:</label>
+            <input type="text" class="form-control" placeholder="# Ganadores" #numeroganadores>
+        </div>
+        <button type="button" class="btn btn-outline-primary btn-block" (click)="calcularGanadores( numeroparticipantes.value, numeroganadores.value)">Generar Ganadores</button>
+        <br>
+        <div class="alert alert-danger mb-5" role="alert" *ngIf="mostrarError">
+            <strong>{{ msg }}</strong>
+        </div>
+    </form>
+</div>
